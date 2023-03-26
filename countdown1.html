@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Countdown</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+			background-color: black;
+			color: white;
+			font-size: 5em;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			height: 100vh;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<script>
+		let count = 1000;
+		const countdown = setInterval(() => {
+			document.body.innerHTML = count;
+			count--;
+			if (count === 0) {
+				clearInterval(countdown);
+				document.body.innerHTML = "Countdown abgeschlossen!";
+			}
+		}, 1000);
+	</script>
+</body>
+</html>
